@@ -33,9 +33,9 @@ server.use('*', (req, res, next) => {
   
   server.disabled('x-powered-by')
   
-
+  if (require.main === module) {
 server.listen(PORT, () => {
 console.log (`Server running on http://localhost:${PORT}`)
-})
+})}
 
 module.exports = server
